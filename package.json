@@ -1,0 +1,19 @@
+{
+    "name": "aghpb",
+    "version": "1.0.0",
+    "description": "Anime girls holding programming books API wrapper for 🟦 TypeScript.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Goldy",
+    "license": "MIT",
+    "dependencies": {
+        "typescript": "^5.1.6"
+    }
+}
