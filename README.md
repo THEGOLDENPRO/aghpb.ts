@@ -3,6 +3,8 @@
   # 🟦 aghpb.ts 📚
   <sub>Typescript API wrapper for the anime girls holding programming books [API](https://api.devgoldy.xyz/aghpb/v1/docs)</sub>
 
+  [![npm](https://img.shields.io/npm/v/aghpb?style=flat)](https://www.npmjs.com/package/aghpb)
+
 </div>
 
 <div align="center">
