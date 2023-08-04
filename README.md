@@ -56,7 +56,7 @@ This is how you may retrieve a list of available categories:
 ```typescript
 import { Client } from "aghpb";
 
-let client = new Client();
+const client = new Client();
 
 client.categories().then(
     (categories) => {
