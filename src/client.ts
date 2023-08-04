@@ -16,16 +16,16 @@ export class Client {
      * 
      * Uses the ``/v1/random`` endpoint.
      */
-    public async random(category: string | null = null): Promise<Book> {
+    async random(category?: string): Promise<Book> {
         let url = this.baseUrl + "/v1/random";
 
-        if (category !== null) {
+        if (category) {
             url += "?category=" + category;
         }
 
         let response = await fetch(url);
 
-        if (response.status == 404) {
+        if (!response.ok) {
             throw new APIError(
                 await response.json()
             )
@@ -44,7 +44,7 @@ export class Client {
      * 
      * Uses the ``/v1/categories`` endpoint.
      */
-    public async categories(): Promise<Array<string>> {
+    async categories(): Promise<Array<string>> {
         let url = this.baseUrl + "/v1/categories";
 
         let response = await fetch(url);

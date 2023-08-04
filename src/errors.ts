@@ -1,18 +1,16 @@
-interface APIErrorDict {
+interface APIErrorInterface {
     error: string;
     message: string;
 }
 
-class APIError extends Error {
+export class APIError extends Error {
     name: string;
     message: string;
 
-    constructor(errorDict: APIErrorDict) {
+    constructor(apiError: APIErrorInterface) {
         super();
 
-        this.name = errorDict["error"];
-        this.message = errorDict["message"];
+        this.name = apiError.error;
+        this.message = apiError.message;
     }
 }
-
-export { APIError }

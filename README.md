@@ -29,7 +29,7 @@ This is how you may retrieve a random anime girl holding a programming book:
 import * as fs from "fs";
 import { Client } from "aghpb";
 
-let client = new Client();
+const client = new Client();
 
 client.random().then(
     (book) => {
@@ -37,11 +37,10 @@ client.random().then(
         console.log(`Category: ${book.category}`);
         console.log(`Date Added: ${book.dateAdded}`);
 
-        let imageView = new Uint8Array(book.image);
+        const buffer = Buffer.from(book.image)
 
-        fs.writeFile(
-            "./anime_girl.png", imageView, 
-            error => { if (error) throw error }
+        fs.createWriteStream("./anime_girl.png").write(
+            buffer
         );
     }
 );
