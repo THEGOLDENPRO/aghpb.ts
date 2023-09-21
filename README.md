@@ -49,7 +49,7 @@ client.random().then(
 );
 ```
 You can also retrieve specific categories of anime girls holding programming books like so:
-```rust
+```typescript
 client.random("typescript");
 ```
 
