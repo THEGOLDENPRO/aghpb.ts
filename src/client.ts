@@ -70,6 +70,8 @@ export class Client {
      */
     async get_book(id: string): Promise<Book> {
         let url = this.baseUrl + `/v1/get/id/${id}`;
+
+        url = encodeURI(url);
         let response = await fetch(url);
 
         if (!response.ok) {
@@ -99,6 +101,7 @@ export class Client {
 
         url = encodeURI(url);
         let response = await fetch(url);
+
         let json = await response.json();
 
         if (!response.ok) {
