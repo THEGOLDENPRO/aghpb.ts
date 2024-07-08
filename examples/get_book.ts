@@ -3,9 +3,9 @@ import { Client } from "../src/index";
 
 const client = new Client();
 
-client.random().then(
+client.get_book("151").then(
     (book) => {
-        console.log(`Search ID: ${book.searchId}`);
+        console.log(`Search ID: ${book.searchId}`)
         console.log(`Name: ${book.name}`);
         console.log(`Category: ${book.category}`);
         console.log(`Date Added: ${book.dateAdded}`);
